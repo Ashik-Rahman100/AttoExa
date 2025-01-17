@@ -2,6 +2,8 @@ import AboutPage from "@/components/Home/About/AboutPage";
 import Banner from "@/components/Home/Banner";
 import Dream from "@/components/Home/Dream/Dream";
 import HeroCard from "@/components/Home/HeroCard/HeroCard";
+import Projects from "@/components/Home/Projects/Projects";
+import Stories from "@/components/Home/Stories/Stories";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       </div>
       <AboutPage></AboutPage>
       <Dream></Dream>
+      <Projects></Projects>
+      <Stories></Stories>
     </div>
   );
 }
