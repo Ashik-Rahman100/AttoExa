@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Dream() {
   return (
     <div
-      className="px-32 mt-20"
+      className="px-3 lg:px-32 mt-20"
       style={{
         backgroundImage: `url('/home/dream/dream-bg.png')`,
       }}
