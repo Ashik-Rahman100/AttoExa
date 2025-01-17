@@ -21,9 +21,18 @@ export default function Banner() {
               natuur samen floreren. Met onze praktische groene oplossingen
               maken we dit werkelijkheid.
             </p>
-            <button className="btn btn-white flex justify-start w-[266px]">
-              Doe met ons mee
-            </button>
+            {/* <button className="btn btn-white flex justify-start w-[266px]">
+             
+            </button> */}
+
+            <div className="join flex justify-start w-[266px]">
+              <button className=" btn  bg-white border-none join-item">
+                Doe met ons mee
+              </button>
+              <button className="btn bg-white border-none text-black join-item">
+                i
+              </button>
+            </div>
           </div>
         </div>
       </div>

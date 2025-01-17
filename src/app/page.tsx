@@ -1,5 +1,6 @@
 import AboutPage from "@/components/Home/About/AboutPage";
 import Banner from "@/components/Home/Banner";
+import Dream from "@/components/Home/Dream/Dream";
 import HeroCard from "@/components/Home/HeroCard/HeroCard";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <HeroCard></HeroCard>
       </div>
       <AboutPage></AboutPage>
+      <Dream></Dream>
     </div>
   );
 }
