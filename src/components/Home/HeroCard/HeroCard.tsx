@@ -9,7 +9,8 @@ export default function HeroCard() {
         <Image
           src="/home/heroCard/image-1.png"
           height={206}
-          width={360}
+          width={500}
+          className="image-full"
           alt="project images"
         />
       </div>

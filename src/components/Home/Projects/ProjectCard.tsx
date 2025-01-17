@@ -7,7 +7,7 @@ export default function ProjectCard() {
         <Image
           src="/home/projects/image-1.png"
           height={216}
-          width={380}
+          width={500}
           alt="project images"
         />
       </figure>
