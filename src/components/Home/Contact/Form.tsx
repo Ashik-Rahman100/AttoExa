@@ -12,8 +12,8 @@ export default function Form() {
               <span className="label-text">Voornaam</span>
             </label>
             <input
-              type="email"
-              placeholder="email"
+              type="text"
+              placeholder="Voornaam"
               className="input input-bordered"
               required
             />
@@ -23,8 +23,8 @@ export default function Form() {
               <span className="label-text">Achternaam</span>
             </label>
             <input
-              type="password"
-              placeholder="password"
+              type="text"
+              placeholder="Achternaam"
               className="input input-bordered"
               required
             />
@@ -37,18 +37,18 @@ export default function Form() {
             </label>
             <input
               type="email"
-              placeholder="email"
+              placeholder="E-mailadres"
               className="input input-bordered"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">E-mailadres</span>
+              <span className="label-text">Telefoonnummer</span>
             </label>
             <input
-              type="password"
-              placeholder="password"
+              type="text"
+              placeholder="Telefoonnummer"
               className="input input-bordered"
               required
             />
@@ -60,8 +60,8 @@ export default function Form() {
               <span className="label-text">Onderwerp</span>
             </label>
             <input
-              type="email"
-              placeholder="email"
+              type="text"
+              placeholder="Onderwerp"
               className="input input-bordered"
               required
             />
@@ -72,15 +72,16 @@ export default function Form() {
             <label className="label">
               <span className="label-text">Bericht</span>
             </label>
-            <textarea
-              placeholder="Bio"
-              className="textarea textarea-bordered textarea-md w-full "
-            ></textarea>
+            <input
+              placeholder="Bericht"
+              className="textarea textarea-bordered textarea-lg w-full "
+              type="text"
+            ></input>
           </div>
         </div>
         <div className="form-control mt-6">
           {/* <button className="btn btn-primary">Login</button> */}
-          <div className="join  py-4">
+          <div className="join">
             <button className=" btn  bg-[#77892B] text-white hover:bg-[#404d07] hover:text-white join-item">
               Verzenden
             </button>
