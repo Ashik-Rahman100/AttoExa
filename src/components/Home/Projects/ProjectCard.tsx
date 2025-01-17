@@ -1,10 +1,14 @@
+import Image from "next/image";
+
 export default function ProjectCard() {
   return (
-    <div className="card card-compact bg-base-100  shadow-xl border border-b-[#77892B]">
+    <div className="card card-compact bg-base-100  shadow-xl border-b-2 border-[#77892B]">
       <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
+        <Image
+          src="/home/projects/image-1.png"
+          height={216}
+          width={500}
+          alt="project images"
         />
       </figure>
       <div className="card-body">

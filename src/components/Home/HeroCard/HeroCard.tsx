@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroCard() {
@@ -5,9 +6,12 @@ export default function HeroCard() {
     <div className="card card-compact bg-base-100 rounded-none shadow-xl">
       {/* <figure> */}
       <div className="p-2">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
+        <Image
+          src="/home/heroCard/image-1.png"
+          height={206}
+          width={500}
+          className="image-full"
+          alt="project images"
         />
       </div>
       {/* </figure> */}

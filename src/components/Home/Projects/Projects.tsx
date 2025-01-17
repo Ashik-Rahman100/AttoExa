@@ -13,7 +13,7 @@ export default function Projects() {
           mensen uit de armoede te halen, biodiversiteit te behouden en
           verwoestijning terug te dringen.
         </p>
-        <p className="bg-[#F0ECE3] text-[#454C4F] px-2 py-4 border-2 border-l-[#77892B] ">
+        <p className="bg-[#F0ECE3] text-[#454C4F] px-2 py-4 border-l-4 border-[#77892B] ">
           In plaats van alleen meer bomen te planten, werken we aan het
           herstellen van landschappen en het beschermen ervan tegen ontbossing
           op de lange termijn.
