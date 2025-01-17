@@ -3,20 +3,28 @@ export default function Banner() {
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage:
-          "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+        backgroundImage: `url('/home/banner/hero.png')`,
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-neutral-content text-center">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
+      <div className="hero-overlay  blur-2xl"></div>
+      <div className="hero-content text-white text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div>
+            <h1 className="mb-5 text-7xl text-left ">Jade Reforestry</h1>
+            <p className="text-4xl text-left">
+              Vergroening in harmonie met natuur en landbouw
+            </p>
+          </div>
+          <div>
+            <p className="mb-5 text-lg text-left ">
+              Bij Jade Reforestry geloven we in een toekomst waar landbouw en
+              natuur samen floreren. Met onze praktische groene oplossingen
+              maken we dit werkelijkheid.
+            </p>
+            <button className="btn btn-white flex justify-start w-[266px]">
+              Doe met ons mee
+            </button>
+          </div>
         </div>
       </div>
     </div>
