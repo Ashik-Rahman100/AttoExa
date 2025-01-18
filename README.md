@@ -10,7 +10,7 @@
 
 ## Feture:
 
-- Render pre-build data from server
+- Fetch pre-generated data from server using Next js SSG (Static Side Generation)
 - Mobile responsive
 - Navigate different Section
 
