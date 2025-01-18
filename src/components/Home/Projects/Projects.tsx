@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import ProjectCard from "./ProjectCard";
 type TDivide = {
@@ -86,7 +86,12 @@ export default function Projects() {
             Dekijk onze projecten
           </button>
           <button className="btn bg-[#77892B] hover:bg-[#404d07] hover:text-white text-white join-item">
-            i
+            <Image
+              height={7}
+              width={3.5}
+              src="/VectorWhite.png"
+              alt="vector"
+            ></Image>
           </button>
         </div>
       </section>

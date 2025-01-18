@@ -8,7 +8,7 @@ export default function Dream() {
         backgroundImage: `url('/home/dream/dream-bg.png')`,
       }}
     >
-      <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-16">
+      <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-20">
         <section className="pt-16">
           <h2 className="text-4xl">Onze droom</h2>
           <p className="py-6 text-[18px]">

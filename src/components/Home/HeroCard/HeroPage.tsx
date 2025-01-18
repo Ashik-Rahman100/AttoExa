@@ -33,8 +33,8 @@ export default function HeroPage() {
     },
   ];
   return (
-    <div className="-mt-10 lg:-mt-24">
-      <h2 className="text-[26px] text-center text-[#ffff]">
+    <div className="-mt-2 lg:-mt-36">
+      <h2 className="text-[26px] text-center font-bold opacity-0.1 py-6 text-[#ffffff] z-10">
         Praktische groene oplossingen
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3  gap-4  px-3 lg:px-32">
