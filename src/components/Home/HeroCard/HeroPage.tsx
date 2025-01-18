@@ -8,30 +8,26 @@ interface IHeroCard {
   image: string | StaticImageData;
 }
 
-export default function HeroPage() {
-  const heroData: IHeroCard[] = [
+async function getData() {
+  const res = await fetch(
+    `https://expensetracker-five-alpha.vercel.app/api/hero`,
     {
-      title: "Agroforestry",
-      description:
-        "We integreren bomen en gewassen voor een duurzamer landbouwsysteem. Dit verbetert de bodemkwaliteit, verhoogt de biodiversiteit en zorgt voor een gezondere oogst.",
-      btnText: "Meer over Agroforestry",
-      image: "/home/heroCard/image-1.png",
-    },
-    {
-      title: "Kwekerij",
-      description:
-        "Onze kwekerij biedt een ruim assortiment aan bomen en planten, zorgvuldig geselecteerd voor maximale groei en duurzaamheid. Bezoek onze shop voor advies en aankoop van de beste soorten.",
-      btnText: "Meer over ons Assortiment",
-      image: "/home/heroCard/image-2.png",
-    },
-    {
-      title: "Boomverzorging",
-      description:
-        "Boomverzorgers zorgen ervoor dat jouw bomen gezond en sterk blijven. Van aanplanting tot onderhoud en snoeien tot vellen. Wij staan klaar met deskundig advies en service.",
-      btnText: "Meer over Boomverzorging",
-      image: "/home/heroCard/image-3.png",
-    },
-  ];
+      next: {
+        revalidate: 10,
+      },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+  return data;
+}
+
+export default async function HeroPage() {
+  const heroData: IHeroCard[] = await getData();
   return (
     <div className="-mt-2 lg:-mt-36">
       <h2 className="text-[26px] text-center font-bold opacity-0.1 py-6 text-[#ffffff] z-10">

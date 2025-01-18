@@ -13,49 +13,27 @@ interface IProjectData {
   divideDes: TDivide[];
   image: string | StaticImageData;
 }
+async function getData() {
+  const res = await fetch(
+    `https://expensetracker-five-alpha.vercel.app/api/projects`,
+    {
+      next: {
+        revalidate: 10,
+      },
+    }
+  );
 
-export default function Projects() {
-  const projectsData: IProjectData[] = [
-    {
-      id: 1,
-      title: "Herbebossing Veluwe",
-      image: "/home/projects/image-1.png",
-      location: "Veluwe, Nederland",
-      sortDes:
-        "Dit project richt zich op het herstellen van gedegradeerde bossen in de Veluwe.....",
-      divideDes: [
-        { id: 11, des: "2.000.000 bomen geplant" },
-        { id: 12, des: "10 bedreigde diersoorten beschermd" },
-        { id: 13, des: "150 lokale banen gecreëerd" },
-      ],
-    },
-    {
-      id: 2,
-      title: "Groen Groningen",
-      location: "Groningen, Nederland",
-      image: "/home/projects/image-2.png",
-      sortDes:
-        "Dit project werkt aan het herstellen van gedegradeerde gronden in de provincie.....",
-      divideDes: [
-        { id: 14, des: "1.500.000 bomen geplant" },
-        { id: 15, des: "3.000 hectare onder herstel" },
-        { id: 16, des: "20 gemeenschappen betrokken" },
-      ],
-    },
-    {
-      id: 3,
-      title: "Stadsbos Rotterdam",
-      location: "Rotterdam, Nederland",
-      image: "/home/projects/image-3.png",
-      sortDes:
-        "Dit project focust op het vergroenen van stedelijke gebieden in Rotterdam door het...",
-      divideDes: [
-        { id: 17, des: "500.000 bomen geplant" },
-        { id: 18, des: "1.000 hectare onder herstel" },
-        { id: 19, des: "50.000 inwoners direct gebaat" },
-      ],
-    },
-  ];
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+  return data;
+}
+
+export default async function Projects() {
+  const projectsData: IProjectData[] = await getData();
+
   return (
     <div className="px-3 lg:px-32  mt-20" id="projecten-fotso">
       <h1 className="text-4xl">
