@@ -1,29 +1,40 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export default function ProjectCard() {
+type TDivide = {
+  id: number;
+  des: string;
+};
+interface IProjectCard {
+  location: string;
+  title: string;
+  sortDes: string;
+  divideDes: TDivide[];
+  image: string | StaticImageData;
+}
+
+export default function ProjectCard({ project }: { project: IProjectCard }) {
   return (
     <div className="card card-compact bg-base-100  shadow-xl border-b-2 border-[#77892B]">
       <figure>
         <Image
-          src="/home/projects/image-1.png"
+          src={project?.image}
           height={216}
           width={500}
-          alt="project images"
+          alt={project?.title}
         />
       </figure>
       <div className="card-body">
-        <p className="text-[#77892B] text-[14px]">Veluwe, Nederland</p>
-        <h2 className="text-[24px] ">Herbebossing Veluwe</h2>
+        <p className="text-[#77892B] text-[14px]">{project?.location}</p>
+        <h2 className="text-[24px] ">{project?.title}</h2>
 
-        <p>
-          Dit project richt zich op het herstellen van gedegradeerde bossen in
-          de Veluwe.....
-        </p>
+        <p>{project?.sortDes}</p>
         <hr />
         <div className="pt-2">
-          <p className="py-1 text-[17]">2.000.000 bomen geplant</p>
-          <p className="py-1">10 bedreigde diersoorten beschermd</p>
-          <p className="py-1"> 150 lokale banen gecreëerd</p>
+          {project?.divideDes.map((des, index) => (
+            <p key={index} className="py-1 text-[17]">
+              {des?.des}
+            </p>
+          ))}
         </div>
       </div>
     </div>

@@ -1,6 +1,61 @@
+import { StaticImageData } from "next/image";
+
 import ProjectCard from "./ProjectCard";
+type TDivide = {
+  id: number;
+  des: string;
+};
+interface IProjectData {
+  id: number;
+  location: string;
+  title: string;
+  sortDes: string;
+  divideDes: TDivide[];
+  image: string | StaticImageData;
+}
 
 export default function Projects() {
+  const projectsData: IProjectData[] = [
+    {
+      id: 1,
+      title: "Herbebossing Veluwe",
+      image: "/home/projects/image-1.png",
+      location: "Veluwe, Nederland",
+      sortDes:
+        "Dit project richt zich op het herstellen van gedegradeerde bossen in de Veluwe.....",
+      divideDes: [
+        { id: 11, des: "2.000.000 bomen geplant" },
+        { id: 12, des: "10 bedreigde diersoorten beschermd" },
+        { id: 13, des: "150 lokale banen gecreëerd" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Groen Groningen",
+      location: "Groningen, Nederland",
+      image: "/home/projects/image-2.png",
+      sortDes:
+        "Dit project werkt aan het herstellen van gedegradeerde gronden in de provincie.....",
+      divideDes: [
+        { id: 14, des: "1.500.000 bomen geplant" },
+        { id: 15, des: "3.000 hectare onder herstel" },
+        { id: 16, des: "20 gemeenschappen betrokken" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Stadsbos Rotterdam",
+      location: "Rotterdam, Nederland",
+      image: "/home/projects/image-3.png",
+      sortDes:
+        "Dit project focust op het vergroenen van stedelijke gebieden in Rotterdam door het...",
+      divideDes: [
+        { id: 17, des: "500.000 bomen geplant" },
+        { id: 18, des: "1.000 hectare onder herstel" },
+        { id: 19, des: "50.000 inwoners direct gebaat" },
+      ],
+    },
+  ];
   return (
     <div className="px-3 lg:px-32  mt-20">
       <h1 className="text-4xl">
@@ -21,9 +76,9 @@ export default function Projects() {
       </div>
       <section>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4  ">
-          <ProjectCard></ProjectCard>
-          <ProjectCard></ProjectCard>
-          <ProjectCard></ProjectCard>
+          {projectsData.map((project, index) => (
+            <ProjectCard key={index} project={project}></ProjectCard>
+          ))}
         </div>
 
         <div className="join flex justify-center pt-14 pb-6">

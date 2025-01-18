@@ -1,29 +1,31 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+interface IHeroCard {
+  title: string;
+  description: string;
+  btnText: string;
+  image: string | StaticImageData;
+}
 
-export default function HeroCard() {
+export default function HeroCard({ hero }: { hero: IHeroCard }) {
   return (
     <div className="card card-compact bg-base-100 rounded-none shadow-xl">
       {/* <figure> */}
       <div className="p-2">
         <Image
-          src="/home/heroCard/image-1.png"
+          src={hero.image}
           height={206}
           width={500}
           className="image-full"
-          alt="project images"
+          alt={hero.title}
         />
       </div>
       {/* </figure> */}
       <div className="card-body">
-        <p className="text-[16px]">
-          We integreren bomen en gewassen voor een duurzamer landbouwsysteem.
-          Dit verbetert de bodemkwaliteit, verhoogt de biodiversiteit en zorgt
-          voor een gezondere oogst.
-        </p>
+        <p className="text-[16px]">{hero.description}</p>
 
         <p className="text-[#77892B] mt-10">
-          <Link href="#">Meer over ons Assortiment</Link>
+          <Link href="#">{hero.btnText}</Link>
         </p>
       </div>
     </div>
