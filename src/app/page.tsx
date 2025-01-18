@@ -10,10 +10,15 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <div className="grid grid-cols-1 lg:grid-cols-3  gap-4 -mt-10 lg:-mt-20 px-3 lg:px-32">
-        <HeroCard></HeroCard>
-        <HeroCard></HeroCard>
-        <HeroCard></HeroCard>
+      <div className="-mt-10 lg:-mt-24">
+        <h2 className="text-[26px] text-center text-[#ffff]">
+          Praktische groene oplossingen
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3  gap-4  px-3 lg:px-32">
+          <HeroCard></HeroCard>
+          <HeroCard></HeroCard>
+          <HeroCard></HeroCard>
+        </div>
       </div>
       <AboutPage></AboutPage>
       <Dream></Dream>

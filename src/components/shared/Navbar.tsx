@@ -1,6 +1,9 @@
+import Image from "next/image";
+
 export default function Navbar() {
   return (
-    <div>
+    <div className="relative">
+      <div className="mt-16"></div>
       <div className="navbar bg-[#133216] text-white">
         <div className="navbar-start">
           <div className="dropdown">
@@ -22,54 +25,58 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-[#133216] text-white  z-[1] mt-3 w-full p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
+                <a>Home</a>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <a>Over Ons</a>
               </li>
               <li>
-                <a>Item 3</a>
+                <a>Agroforestry</a>
+              </li>
+              <li>
+                <a>De Kwekerij</a>
+              </li>
+              <li>
+                <a>Projecten & Fotso’s</a>
+              </li>
+              <li>
+                <a>Contact</a>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="absolute -mt-20">
+            <Image
+              src="/navbar/logo.png"
+              height={157}
+              width={350}
+              alt="Logo"
+            ></Image>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <a>Home</a>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
+              <a>Over Ons</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>Agroforestry</a>
+            </li>
+            <li>
+              <a>De Kwekerij</a>
+            </li>
+            <li>
+              <a>Projecten & Fotso’s</a>
+            </li>
+            <li>
+              <a>Contact</a>
             </li>
           </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
         </div>
       </div>
     </div>
