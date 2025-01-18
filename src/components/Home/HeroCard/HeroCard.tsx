@@ -11,14 +11,17 @@ export default function HeroCard({ hero }: { hero: IHeroCard }) {
   return (
     <div className="card card-compact bg-base-100 rounded-none shadow-xl">
       {/* <figure> */}
-      <div className="p-2">
+      <div className="p-2 ">
         <Image
           src={hero.image}
           height={206}
           width={500}
-          className="image-full"
+          className="image-full relative"
           alt={hero.title}
         />
+        <h2 className="absolute top-[30%] left-[30%] text-2xl text-white">
+          {hero.title}
+        </h2>
       </div>
       {/* </figure> */}
       <div className="card-body">
