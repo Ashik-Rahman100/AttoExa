@@ -31,9 +31,19 @@ export default function ProjectCard({ project }: { project: IProjectCard }) {
         <hr />
         <div className="pt-2">
           {project?.divideDes.map((des, index) => (
-            <p key={index} className="py-1 text-[17]">
-              {des?.des}
+            <p key={index} className="flex items-center space-x-2 py-1">
+              {" "}
+              <Image
+                height={12}
+                width={19}
+                src="/Vector.png"
+                alt=""
+              ></Image>{" "}
+              <span>{des.des}</span>
             </p>
+            // <p key={index} className="py-1 text-[17]">
+            //   {des?.des}
+            // </p>
           ))}
         </div>
       </div>

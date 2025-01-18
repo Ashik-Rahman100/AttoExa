@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Form() {
   return (
-    <div className="card bg-base-100 w-full  shrink-0 shadow-2xl">
+    <div className="card bg-base-100 w-full  shrink-0 ">
       <form className="card-body">
         <h2 className="text-[22px] text-[#454C4F]">
           Natuurlijk horen we graag van je. <br />
@@ -16,7 +16,7 @@ export default function Form() {
             <input
               type="text"
               placeholder="Voornaam"
-              className="input input-bordered"
+              className="input input-bordered focus:outline-none outline-none"
               required
             />
           </div>
@@ -27,7 +27,7 @@ export default function Form() {
             <input
               type="text"
               placeholder="Achternaam"
-              className="input input-bordered"
+              className="input input-bordered focus:outline-none outline-none"
               required
             />
           </div>
@@ -40,7 +40,7 @@ export default function Form() {
             <input
               type="email"
               placeholder="E-mailadres"
-              className="input input-bordered"
+              className="input input-bordered focus:outline-none outline-none"
               required
             />
           </div>
@@ -51,7 +51,7 @@ export default function Form() {
             <input
               type="text"
               placeholder="Telefoonnummer"
-              className="input input-bordered"
+              className="input input-bordered focus:outline-none outline-none"
               required
             />
           </div>
@@ -64,7 +64,7 @@ export default function Form() {
             <input
               type="text"
               placeholder="Onderwerp"
-              className="input input-bordered"
+              className="input input-bordered focus:outline-none outline-none"
               required
             />
           </div>
@@ -76,7 +76,7 @@ export default function Form() {
             </label>
             <input
               placeholder="Bericht"
-              className="textarea textarea-bordered textarea-lg w-full "
+              className="textarea textarea-bordered textarea-lg w-full focus:outline-none outline-none"
               type="text"
             ></input>
           </div>

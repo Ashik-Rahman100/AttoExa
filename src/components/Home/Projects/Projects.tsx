@@ -57,7 +57,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="px-3 lg:px-32  mt-20">
+    <div className="px-3 lg:px-32  mt-20" id="projecten-fotso">
       <h1 className="text-4xl">
         Samen werken aan een groenere <br /> wereld: bekijk onze projecten
       </h1>

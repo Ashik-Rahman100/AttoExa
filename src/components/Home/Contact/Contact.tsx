@@ -9,7 +9,10 @@ export default function Contact() {
         backgroundImage: `url('/home/dream/dream-bg.png')`,
       }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8  py-20">
+      <div
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8  py-20"
+        id="contact"
+      >
         <section>
           <h2 className="text-[#022205] text-4xl">
             Samen maken we het verschil
