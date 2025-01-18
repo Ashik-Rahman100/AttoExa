@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -12,24 +13,42 @@ export default function Footer() {
             alt="Footer logo"
           ></Image>
           <p>
-            "De beste tijd om een boom te planten was 20 jaar <br /> geleden. De
-            op één na beste tijd is nu."
+            De beste tijd om een boom te planten was 20 jaar <br /> geleden. De
+            op één na beste tijd is nu.
           </p>
         </aside>
         <nav>
           <h6 className="footer-title">Links</h6>
-          <a className="link link-hover">Home</a>
-          <a className="link link-hover">Over Ons</a>
-          <a className="link link-hover">Agroforestry</a>
-          <a className="link link-hover">Projecten & Fotso’s</a>
-          <a className="link link-hover">Contact</a>
+          <Link href="/" className="link link-hover">
+            Home
+          </Link>
+          <Link href="#over-ons" className="link link-hover">
+            Over Ons
+          </Link>
+          <Link href="#agroforestry" className="link link-hover">
+            Agroforestry
+          </Link>
+          <Link href="#projecten-fotso" className="link link-hover">
+            Projecten & Fotso’s
+          </Link>
+          <Link href="#contact" className="link link-hover">
+            Contact
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Socials</h6>
-          <a className="link link-hover">Linkedin</a>
-          <a className="link link-hover">Facebook</a>
-          <a className="link link-hover">Twitter</a>
-          <a className="link link-hover">Youtube</a>
+          <Link href="https://www.linkedin.com" className="link link-hover">
+            Linkedin
+          </Link>
+          <Link href={"https://www.linkedin.com"} className="link link-hover">
+            Facebook
+          </Link>
+          <Link href={"https://www.linkedin.com"} className="link link-hover">
+            Twitter
+          </Link>
+          <Link href={"https://www.linkedin.com"} className="link link-hover">
+            Youtube
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">NEEM CONTACT OP</h6>
@@ -42,10 +61,6 @@ export default function Footer() {
         </nav>
       </footer>
       <aside className="text-center pt-8">
-        {/* <p>
-          Copyright © {new Date().getFullYear()} - All right reserved by ACME
-          Industries Ltd
-        </p> */}
         <p>
           © Jade Reforestry | {new Date().getFullYear()} | jadereforestry.nl |
           Web Design by Online Marketing Bakery

@@ -22,7 +22,7 @@ export default function StoriesCard({ story }: { story: IStoryCard }) {
       <div className="card-body mt-[40%] text-wrap">
         <div className="border-l-4 border-[#77892B] pl-3">
           <h2 className="card-title ">{story.title}</h2>
-          <p className="mr-16">{story.description}</p>
+          <p className="">{story.description}</p>
         </div>
       </div>
     </div>

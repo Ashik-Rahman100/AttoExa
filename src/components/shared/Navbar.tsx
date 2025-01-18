@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="relative">
-      <div className="mt-16"></div>
+    <div className="relative -z-1">
       <div className="navbar bg-[#133216] text-white">
         <div className="navbar-start">
           <div className="dropdown">
@@ -25,56 +25,60 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-[#133216] text-white  z-[1] mt-3 w-full p-2 shadow"
+              className="menu menu-sm dropdown-content bg-[#133216] text-white  z-[1] mt-3 w-72 lg:w-full p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <a>Over Ons</a>
+                <Link href="#over-ons">Over Ons</Link>
               </li>
               <li>
-                <a>Agroforestry</a>
+                <Link href="#agroforestry">Agroforestry</Link>
               </li>
               <li>
-                <a>De Kwekerij</a>
+                <Link href="#de-kwekerij">De Kwekerij</Link>
               </li>
               <li>
-                <a>Projecten & Fotso’s</a>
+                <Link href="#projecten-fotso’s">Projecten & Fotso’s</Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link href="#contact">Contact</Link>
               </li>
             </ul>
           </div>
-          <a className="absolute -mt-20">
+          {/* className="absolute w-32 lg:w-80 ml-[20%] lg:ml-0 -mt-5  lg:-mt-24 -z-5" */}
+          <Link
+            href="/"
+            className="absolute w-32 lg:w-80 ml-[50%] lg:ml-0 -mt-2  lg:-mt-20 -z-5"
+          >
             <Image
               src="/navbar/logo.png"
               height={157}
               width={350}
               alt="Logo"
             ></Image>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a>Over Ons</a>
+              <Link href="#over-ons">Over Ons</Link>
             </li>
             <li>
-              <a>Agroforestry</a>
+              <Link href="#agroforestry">Agroforestry</Link>
             </li>
             <li>
-              <a>De Kwekerij</a>
+              <Link href="#de-kwekerij">De Kwekerij</Link>
             </li>
             <li>
-              <a>Projecten & Fotso’s</a>
+              <Link href="#projecten-fotso">Projecten & Fotso’s</Link>
             </li>
             <li>
-              <a>Contact</a>
+              <Link href="#contact">Contact</Link>
             </li>
           </ul>
         </div>

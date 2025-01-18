@@ -1,9 +1,18 @@
 import Image from "next/image";
 
 export default function Dream() {
+  const discription = [
+    { description: "Slimme groene landbouw" },
+    { description: "Een groen netwerk door heel Europa" },
+    { description: "Harmonie tussen natuur en landbouw" },
+    { description: "Vrij bewegende wilde dieren" },
+    { description: "Een aaneengesloten weelderig bladerdak" },
+    { description: "Veilige groene havens" },
+  ];
   return (
     <div
       className="px-3 lg:px-32 mt-20"
+      id="de-kwekerij"
       style={{
         backgroundImage: `url('/home/dream/dream-bg.png')`,
       }}
@@ -20,6 +29,20 @@ export default function Dream() {
             ooit het gevoel te hebben de veilige groene haven van de natuur te
             verlaten.
           </p>
+          <div className="pt-5">
+            {discription.map((des, index) => (
+              <p key={index} className="flex items-center space-x-2 py-1">
+                {" "}
+                <Image
+                  height={12}
+                  width={19}
+                  src="/Vector.png"
+                  alt=""
+                ></Image>{" "}
+                <span>{des.description}</span>
+              </p>
+            ))}
+          </div>
         </section>
         <section>
           <Image

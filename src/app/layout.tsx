@@ -1,5 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import TopNavbar from "@/components/shared/TopNavbar";
 import type { Metadata } from "next";
 import { Tiro_Bangla } from "next/font/google";
 import "./globals.css";
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${TiroBangla.variable} antialiased`}>
+        <TopNavbar></TopNavbar>
         <Navbar />
         {children}
         <Footer />
