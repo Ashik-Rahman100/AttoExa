@@ -7,27 +7,30 @@ interface IStoryCard {
   image: string | StaticImageData;
 }
 
-export default function Stories() {
-  const storyData: IStoryCard[] = [
+async function getData() {
+  const res = await fetch(
+    `https://expensetracker-five-alpha.vercel.app/api/story`,
     {
-      title: "Boerderij De Groene Hoop",
-      description:
-        "De gemeente Natuurstad wilde haar stedelijke omgeving vergroenen en biodiversiteit bevorderen. Met onze hulp hebben ze parken en.....",
-      image: "/home/stories/image-1.png",
-    },
-    {
-      title: "Gemeente Natuurstad",
-      description:
-        "Boerderij De Groene Hoop had te kampen met afnemende oogsten door bodemerosie en extreme weersomstandigheden. Door samen.....",
-      image: "/home/stories/image-2.png",
-    },
-    {
-      title: "Stichting Groen Leven",
-      description:
-        "De gemeente Natuurstad wilde haar stedelijke omgeving vergroenen en biodiversiteit bevorderen. Met onze hulp hebben ze parken en verlaten.....",
-      image: "/home/stories/image-3.png",
-    },
-  ];
+      next: {
+        revalidate: 10,
+      },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+
+  // const filtered = data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
+
+  return data;
+}
+
+export default async function Stories() {
+  const storyData: IStoryCard[] = await getData();
+
   return (
     <div className="px-3 lg:px-32 pt-20 pb-10" id="agroforestry">
       <h1 className="text-4xl text-center">Klantverhalen</h1>
